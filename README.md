@@ -1,4 +1,4 @@
-# Progettio prova finale API (Algoritmi e strutture dati 2021)
+# Progetto prova finale API (Algoritmi e strutture dati 2021)
 
 *This project was made between June and July 2021, at Polytechnic University of Milan.*
 
@@ -35,10 +35,10 @@ primi arrivati
 - I k indici interi sono stampati, su un unico rigo, separati da uno spazio, in un
 qualunque ordine
 
-### esecuzione d'esempio
+### Esecuzione d'esempio
+<pre>
 
-Un'esecuzione d'esempio
-Input ricevuto:                    Commenti e Output Atteso
+Input ricevuto:               Commenti e Output Atteso
 3,2                           Si richiede di manipolare grafi da 3 nodi e riportare i k=2 migliori
 AggiungiGrafo                 Aggiunta del primo grafo (indice 0, somma cammini = 7)
 0,4,3
@@ -53,5 +53,15 @@ AggiungiGrafo                 Aggiunta del terzo grafo (indice 2, somma cammini 
 0,0,5
 0,9,0
 TopK                          0 1 Oppure 1 0
+</pre>
 
-   
+### Requisiti
+
+- La correttezza e l'efficienza della soluzione proposta sono state valutate con
+batterie di test automatizzate, al fine di valutare la complessità temporale e spaziale degli algoritmi utilizzati
+
+### Note conclsive
+
+- La soluzione proposta ha superato tutti i test con il massimo dell'efficienza temporale e spaziale
+
+
