@@ -80,7 +80,7 @@ int leggi_somma( int N){
     int i, sum=0, j, num;
     char c;
     int matr[N][N], dist[N], to_explore;
-    nodo_t coda[N*N];  // non sicuro dimensione
+    nodo_t coda[N*N];  
 
     //lettura
     
