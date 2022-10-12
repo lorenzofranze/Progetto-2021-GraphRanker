@@ -1,6 +1,6 @@
 # Progetto prova finale API (Algoritmi e strutture dati 2021)
 
-*This project was made between June and July 2021, at Polytechnic University of Milan.*
+*This project was made between June and July 2021, at Politecnico University of Milan.*
 
 ## GraphRanker
 
