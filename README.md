@@ -1,67 +1,58 @@
-# Progetto prova finale API (Algoritmi e strutture dati 2021)
+# Final Project API (Algorithms and Data Structures 2021)
 
-*This project was made between June and July 2021, at Politecnico University of Milan.*
+*This project was made between June and July 2021, at Politecnico di Milano.*
 
 ## GraphRanker
 
-- L'obiettivo del progetto di quest'anno è la gestione di una classifica tra grafi
-diretti pesati
-- La classifica tiene traccia dei k "migliori" grafi
-- Il programma da realizzare riceve in ingresso:
-   - due parametri, una sola volta (sulla prima riga del file, separati da spazio):
-       - d: il numero di nodi dei grafi
-       - k: la lunghezza della classifica
-   - Una sequenza di comandi tra:
-       - AggiungiGrafo [matrice-di-adiacenza]
-       - TopK
-### AggiungiGrafo
-Richiede di aggiungere un grafo a quelli considerati per stilare la classifica. È
-seguito dalla matrice di adiacenza del grafo stesso, stampata una riga per
-ogni rigo, con gli elementi separati da virgole.
-I nodi del grafo sono da considerarsi etichettati logicamente con un indice
-intero tra 0 e d-1; il nodo in posizione 0 è quello la cui stella uscente è
-descritta dalla prima riga della matrice.
-I pesi degli archi del grafo elementi sono interi nell'intervallo [0, 2^32 – 1].
+- The goal of this year's project is to manage a ranking among directed weighted graphs.
+- The ranking keeps track of the k "best" graphs.
+- The program to be created receives input:
+   - Two parameters, given only once (on the first line of the file, separated by space):
+       - `d`: the number of nodes in the graphs
+       - `k`: the length of the ranking
+   - A sequence of commands among:
+       - `AddGraph [adjacency-matrix]`
+       - `TopK`
+### AddGraph
+Requires adding a graph to those considered for ranking. It is followed by the adjacency matrix of the graph itself, printed one row per line, with elements separated by commas.
+The nodes of the graph are to be considered logically labeled with an integer index between 0 and `d-1`; the node at position 0 is the one whose outgoing star is described by the first row of the matrix.
+The weights of the graph edges are integers in the range `[0, 2^32 – 1]`.
 
 ### TopK
-- Si consideri ogni grafo dall'inizio del programma fino al comando TopK etichettato con un indice intero corrispondente al numero di grafi letti
-prima di esso (partendo da 0)
-- TopK richiede al programma di stampare gli indici interi dei k grafi aventi i k valori più piccoli della seguente metrica:
-- Somma dei cammini più brevi tra il nodo 0 e tutti gli altri nodi del grafo raggiungibili
-da 0
-- Se ci sono più grafi con lo stesso valore della metrica, si dà la precedenza ai
-primi arrivati
-- Le distanze dei nodi non raggiungibili da 0 sono considerate nulle
-- I k indici interi sono stampati, su un unico rigo, separati da uno spazio, in un
-qualunque ordine
+- Consider each graph from the start of the program until the `TopK` command, labeled with an integer corresponding to the number of graphs read before it (starting from 0).
+- `TopK` requires the program to print the integer indices of the `k` graphs having the `k` smallest values of the following metric:
+  - Sum of the shortest paths from node 0 to all other nodes in the graph reachable from 0.
+- If there are multiple graphs with the same metric value, precedence is given to the ones that appeared first.
+- Distances to nodes not reachable from 0 are considered null.
+- The `k` integer indices are printed on a single line, separated by a space, in any order.
 
-### Esecuzione d'esempio
+### Example Execution
 <pre>
 
-Input ricevuto:               Commenti e Output Atteso
-3,2                           Si richiede di manipolare grafi da 3 nodi e riportare i k=2 migliori
-AggiungiGrafo                 Aggiunta del primo grafo (indice 0, somma cammini = 7)
+Received Input:               Comments and Expected Output
+3 2                           Requests to manipulate graphs with 3 nodes and report the k=2 best
+AddGraph                     Adding the first graph (index 0, sum of paths = 7)
 0,4,3
 0,2,0
 2,0,0
-AggiungiGrafo                 Aggiunta del secondo grafo (indice 1, somma cammini = 5)
+AddGraph                     Adding the second graph (index 1, sum of paths = 5)
 0,0,2
 7,0,4
 0,1,0
-AggiungiGrafo                 Aggiunta del terzo grafo (indice 2, somma cammini = 7)
+AddGraph                     Adding the third graph (index 2, sum of paths = 7)
 3,1,8
 0,0,5
 0,9,0
-TopK                          0 1 Oppure 1 0
+TopK                         0 1 or 1 0
 </pre>
 
-### Requisiti
+### Requirements
 
-- La correttezza e l'efficienza della soluzione proposta sono state valutate con
-batterie di test automatizzate, al fine di valutare la complessità temporale e spaziale degli algoritmi utilizzati
+- The correctness and efficiency of the proposed solution were evaluated with automated test suites to assess the time and space complexity of the algorithms used.
 
-### Note conclsive
+### Concluding Notes
 
-- La soluzione proposta ha superato tutti i test con il massimo dell'efficienza temporale e spaziale
+- The proposed solution passed all tests with the highest time and space efficiency.
+
 
 
